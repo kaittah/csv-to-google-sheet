@@ -4,8 +4,7 @@ A Chrome extension for creating Google Sheets from .csv Files in 1 click.
 ***Link to Chrome Extension***: https://chrome.google.com/webstore/detail/csv-to-google-sheet/hfebigpmgamiloehfnkghegpnhggniga
 
 ### Description
-A simpler way to create a google sheet from your .csv file
-Pulling data from your browser is easy. Now viewing and sharing that data just got easier. After you download a .csv file, you only need a click and a drag to transfer it into a Google Sheet that you can manipulate, analyze, and share with colleagues. 
+With this you only need a click and a drag to transfer a .csv file into a Google Sheet that you can manipulate, analyze, and share with colleagues. 
 
 Options:
 * Custom Delimiters, Null Values, Quote Characters - Set these or leave on auto-detect
