@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Extension Options</title></head>
+<body>
+
+Options<br>
+Field Delimiter: <input type="text" id="fieldDelimiterInput" value= "auto-detect"/><br>
+Record Delimeter: <input type="text" id="recordDelimiterInput" value= "auto-detect"/><br>
+Nulls: <input type="text" id="nullsInput" value = ''/><br>
+Field Optionally Enclosed By: <input type ="text" id = "fieldEnclosedInput" value = '"'/><br>
+Escape Character for Character that Encloses the Field: <input type = "text" id = "escapeInput" value = '"'/><br>
+Skip Completely Empty Lines: <input type = "checkbox" id = "skipEmpty" checked /><br>
+Convert All Values to Numbers: <input type = "checkbox" id = "convertInput" checked /><br>
+Use File Name as Title: <input type = "checkbox" id = "addTitle" unchecked /><br>
+Style Column Headers: <input type = "checkbox" id = "prettifyColumns" unchecked /><br>
+Include Data Profiler: <input type = "checkbox" id = "profileData" unchecked /><br>
+<div id="status"></div>
+<button id="save">Save</button>
+
+<script src="options.js"></script>
+</body>
+</html>

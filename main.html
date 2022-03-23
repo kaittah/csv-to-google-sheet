@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<head>
+    <style>
+        body { font-family: Tahoma;}
+        h1 { font-size: medium; font-weight: 100;}
+        h2 { font-size: small; font-weight: 100;}
+        h3 { font-size: small; font-weight: 200; margin-bottom: 0px;}
+        p{
+        margin-top: 0px;
+        }
+        container {min-width: 250px; min-height: 200px; width: 80%; height: auto;}
+        dropContainer {  display: flex; align-items: center;}
+        .column {
+            float: left;
+            }
+            .left {
+            width: 50%;
+            }
+
+            .right {
+            width: 50%;
+            }
+    </style>
+</head>
+<html>
+    <body>
+        <div id = "container">
+            <h1>Drop Your CSV Here</h1>
+            <h2 id = "subheading">A google sheet with the data will open</h2>
+            <div id="dropContainer" style="border:3px solid rgb(46, 48, 165);height:400px;border-radius: 25px;text-align: center">
+                <div id= "imageContainer" style="padding: 50px;">
+                    <img id = "imageHolder" src = "images/fileicon.png" style = "opacity: 0.5;height: auto;width: auto;">
+                    <p id = "message" style = "font-size: 20px;">Drop Here</p><br>
+                    Or <input type="file" id="fileInput" /><br>
+                </div>
+            </div>
+            <div class = "column left">
+            <h3>Parsing Options</h3>
+            Field Delimiter: <input type="text" id="fieldDelimiterInput" value= "auto-detect"/><br>
+            Record Delimeter: <input type="text" id="recordDelimiterInput" value= "auto-detect"/><br>
+            Null Values to Replace with Blanks: <input type="text" id="nullsInput" value = ''/><br>
+            Field Optionally Enclosed By: <input type ="text" id = "fieldEnclosedInput" value = '"'/><br>
+            Escape Character for Character that Encloses the Field: <input type = "text" id = "escapeInput" value = '"'/><br>
+            Skip Completely Empty Lines: <input type = "checkbox" id = "skipEmpty" checked /><br>
+            <br>
+            <button id="save">Click to Save as Default Options</button>
+            </div>
+            <div class = "column right">
+            <h3>Spreadsheet Options</h3>
+            Convert Text to Numbers and Dates: <input type = "checkbox" id = "convertInput" checked /><br>
+            Use File Name as Title: <input type = "checkbox" id = "addTitle" unchecked /><br>
+            Style Column Headers: <input type = "checkbox" id = "prettifyColumns" unchecked /><br>
+            Include Data Profiler: <input type = "checkbox" id = "profileData" unchecked /><br><i>Note: If "Skip Completely Empty Lines" is unchecked and there are blank lines at the end of the file you may see more null values in the data profile.</i>
+            </div>
+            
+            <div id="status"></div>
+            <script src="options.js"></script>
+            <script src="papaparse.min.js"></script>
+            <script src = "main.js"></script>
+        </div>
+        
+    </body>
+</html>
